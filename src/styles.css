@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.RemoveItem:hover {
+  cursor: pointer;
+  color: brown;
+}
+
+.EditItem:hover {
+  cursor: pointer;
+  color: green;
+}
+
+.Modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+}

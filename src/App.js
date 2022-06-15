@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles.css";
+import Form from "./components/Form";
+import ListGroup from "./components/ListGroup";
+import { ToastContainer } from "react-toastify";
+import Modal from "./components/Modal";
+import { useContext } from "react";
+
+import Context from "./store/context";
 
 function App() {
+  const { editTodo } = useContext(Context);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container mt-4 w-20">
+      <Form />
+      <ListGroup />
+      {editTodo && <Modal />}
+      <ToastContainer />
     </div>
   );
 }
